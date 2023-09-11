@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AIAlarm" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#E2BF65</item>
+        <item name="colorPrimaryVariant">#2C394B</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurfaceContainerHighest">#B2B2B2</item>
+        <item name="android:statusBarColor">#082032</item>
+    </style>
+</resources>

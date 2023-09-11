@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_bg"
+        >
+
+        <Button
+            android:id="@+id/onceAlarm"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="Once"
+            android:textSize="18dp"
+            style="@style/Widget.Material3.Button.TextButton"
+            />
+        <Button
+            android:id="@+id/everydayAlarm"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="Everyday"
+            android:textSize="18dp"
+            android:layout_below="@id/onceAlarm"
+            style="@style/Widget.Material3.Button.TextButton"
+            />
+        <Button
+            android:id="@+id/mTofAlarm"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="Mon to Fri"
+            android:textSize="18dp"
+            android:layout_below="@id/everydayAlarm"
+            style="@style/Widget.Material3.Button.TextButton"
+            />
+        <Button
+            android:id="@+id/customAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/mTofAlarm"
+            android:textSize="18dp"
+            android:text="Custom"
+            style="@style/Widget.Material3.Button.TextButton"
+            />
+
+
+    </RelativeLayout>
+
+
+</layout>
+

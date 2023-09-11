@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="basicAlarm"
+            type="com.example.aialarm.data.db.entities.BasicAlarmEntity" />
+    </data>
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/basicAlarmCard"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="#2C394B"
+    app:strokeColor="#2C394B"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+        <ImageButton
+            android:id="@+id/deleteAlarm"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:tint="#B2B2B2"
+            android:src="@drawable/close"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/transparent_background"/>
+
+
+        <TextView
+            android:id="@+id/basicAlarmTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:30 PM"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/repeatBasicAlarm"
+            android:layout_below="@id/basicAlarmTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Everyday"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/basicAlarmSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="#ffffff"
+            android:layout_below="@id/repeatBasicAlarm" />
+
+
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout android:layout_width="match_parent"
+        android:background="#082032"
+        android:layout_height="match_parent"
+        tools:context=".BasicAlarm">
+
+        <TextView
+            android:id="@+id/basicAlarmTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#E2BF65"
+            android:fontFamily="@font/title_font"
+            android:text="BASIC ALARM"
+            android:textSize="23sp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/animation"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="#B2B2B2"
+            android:backgroundTint="#B2B2B2"
+            android:layout_below="@id/basicAlarmTitle"
+            android:layout_centerInParent="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/basicAlarmRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divider"
+            android:padding="7dp"
+            app:spanCount="2"
+            tools:listitem="@layout/row_basic_alarm"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+
+
+
+    </RelativeLayout>
+</layout>

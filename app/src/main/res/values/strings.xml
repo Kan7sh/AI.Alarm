@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AI Alarm</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="ringtones">
+        <item>Basic Alarm</item>
+        <item>Classic Alarm</item>
+        <item>Oversimplified</item>
+        <item>Evacuation</item>
+        <item>Emergency</item>
+
+    </string-array>
+</resources>

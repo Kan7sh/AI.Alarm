@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.aialarm.ui.home.HomeViewModel" />
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.MainActivity">
+
+        <FrameLayout
+            android:id="@+id/homeFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_above="@id/bottomAppBar"
+            android:layout_marginBottom="?android:attr/actionBarSize" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#334756"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="50dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottomNavView"
+                app:menu="@menu/bottom_menu"
+                app:itemIconTint="@color/white"
+                app:itemTextColor="@color/white"
+                android:background="@drawable/transparent_background"/>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            app:fabCustomSize="72dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add"
+            app:backgroundTint="#E2BF65"
+            app:backgroundTintMode="src_atop"
+            app:layout_anchor="@id/bottomAppBar"
+            app:maxImageSize="32dp"
+            android:scaleType="center"
+            app:tint="#000"
+
+            app:shapeAppearanceOverlay="@style/circularFAB" />
+        />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

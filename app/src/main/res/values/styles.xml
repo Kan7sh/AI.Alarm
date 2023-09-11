@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="circularFAB" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="bottomSheetDialogTheme" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/transparent_background</item>
+    </style>
+    <style name="NumberPickerText">
+        <item name="android:textSize">22.5sp</item>
+    </style>
+    <style name="NumberPickerText2">
+        <item name="android:textSize">52sp</item>
+    </style>
+
+    <style name="switchTheme" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        ...
+        <item name="colorPrimary">#E2BF65</item>
+        <item name="colorSurfaceVariant">#B2B2B2</item>
+    </style>
+
+</resources>

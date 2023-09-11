@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_color"
+        >
+
+
+            <ImageView
+                android:id="@+id/referenceIMG"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_below="@id/instructionText"
+                android:layout_marginTop="18dp"
+                android:layout_centerHorizontal="true"/>
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/popupAIText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textSize="50sp"
+            android:textColor="#dddddd"
+            />
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/instructionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click the similar image to stop the alarm"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/dayAIText"
+            android:textSize="16sp"
+            android:textColor="#dddddd"
+            />
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/dayAIText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            android:layout_below="@id/popupAIText"
+            android:layout_centerHorizontal="true"
+            android:textSize="26sp"
+            android:textColor="#dddddd"
+            android:layout_marginBottom="20dp"/>
+
+
+        <Button
+            android:id="@+id/takeImageCompare"
+            android:layout_width="175dp"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="CAMERA"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/imageNotMatchTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textSize="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/referenceIMG"
+            android:textColor="#ff0000"/>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#082032"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".AIAlarm">
+
+        <TextView
+            android:id="@+id/basicAlarmTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI ALARM"
+            android:textColor="#E2BF65"
+            android:layout_margin="12dp"
+            android:fontFamily="@font/title_font"
+            android:textSize="23sp"/>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/animation"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="#B2B2B2"
+            android:layout_below="@id/basicAlarmTitle"
+            android:layout_centerInParent="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/aiAlarmRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divider"
+            android:padding="7dp"
+            tools:listitem="@layout/row_ai_alarm"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+
+
+    </RelativeLayout>
+
+</layout>

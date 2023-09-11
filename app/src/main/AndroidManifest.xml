@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.DISPLAY_SHOW_ON_LOCK_SCREEN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AIAlarm"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.aialarm.ImageViewActivty"
+            android:exported="false" />
+        <activity
+            android:name=".ui.basicalarm.BasicAlarmPopupScreen"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:showOnLockScreen="true" />
+        <activity
+            android:name=".ui.aialarm.AIAlarmPopupScreen"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:showOnLockScreen="true" />
+        <activity
+            android:name=".ui.aialarm.SetAIAlarmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.basicalarm.SetBasicAlarmActivity"
+            android:exported="false" />
+
+        <receiver android:name=".services.BasicAlarmReceiver" />
+        <receiver android:name=".services.AIAlarmReceiver" />
+
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.BasicAlarmSoundService"
+            android:foregroundServiceType="mediaPlayback"
+            android:stopWithTask="false" />
+    </application>
+
+</manifest>
